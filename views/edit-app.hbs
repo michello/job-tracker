@@ -1,0 +1,42 @@
+<h2>Edit application</h2>
+<p> {{app.position}} at {{app.company}}</p>
+<form method="POST" action="/edit/{{app._id}}" style="max-width: 500px" class="form-group">
+	<label for="sel-stage">Update Interview Stage:</label>
+	<select class="form-control form" id="sel-stage" name="stage">
+		<option value="applied">Applied</option>
+		<option value="hackerrank">Hackerrank</option>
+		<option value="phone">Phone</option>
+		<option value="onsite">Onsite</option>
+		<option value="rejected">Rejected</option>
+	</select>
+	<button class="btn btn-block" type="submit" value="edit">Submit</button>
+</form>
+{{#if interviews}}
+	<div class="container">
+		<div class="row">
+			{{#each interviews}}
+				<div class="col small-card" style="max-width:25%">
+					<h3>Stage: {{this.type}}</h3>
+
+					<ul>
+						{{#if this.comments}}
+							{{#each this.comments}}
+								<li>{{this}}</li>
+							{{/each}}
+						{{else}}
+							There are no comments! ):
+						{{/if}}
+					</ul>
+					<form method="POST" action="/add-comment/{{this.job_id}}/{{this.type}}">
+						<textarea name="comment" class="form-control form-control-sm" placeholder="Add a comment here!"></textarea>
+						<p>
+						<button class="btn btn-block" type="submit">Submit</button>
+						</p>
+					</form>
+					
+					
+				</div>
+			{{/each}}
+		</div>
+	</div>
+{{/if}}

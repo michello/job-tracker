@@ -1,0 +1,91 @@
+<div id="body">
+    <div id="cards">
+        <div class="row">
+            <div class="col">
+            	<div class="card">
+                	<h2>Applied</h2>
+                	{{#each applied}}
+                		<div class="small-card">
+	                		<h3>
+	                			{{company}}
+	                			<a href="/edit/{{slug}}">
+	                				<i class="fas fa-pencil-alt"></i>
+	                			</a>
+	                		</h3>
+	                		<p>{{this.position}}</p>
+	                		<p>Applied: {{this.applied}}</p>
+	                	</div>
+                	{{/each}}
+            	</div>
+            </div>
+            <div class="col">
+            	<div class="card">
+                	<h2>Hackerrank</h2>
+                    {{#each hackerrank}}
+                        <div class="small-card">
+                            <h3>
+                                {{company}}
+                                <a href="/edit/{{slug}}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </h3>
+                            <p>{{this.position}}</p>
+                            <p>Applied: {{this.applied}}</p>
+                        </div>
+                    {{/each}}
+            	</div>
+            </div>
+            <div class="col">
+            	<div class="card">
+                	<h2>Phone</h2>
+                    {{#each phone}}
+                        <div class="small-card">
+                            <h3>
+                                {{company}}
+                                <a href="/edit/{{slug}}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </h3>
+                            <p>{{this.position}}</p>
+                            <p>Applied: {{this.applied}}</p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col">
+            	<div class="card">
+                	<h2>Onsite</h2>
+                    {{#each onsite}}
+                        <div class="small-card">
+                            <h3>
+                                {{company}}
+                                <a href="/edit/{{slug}}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </h3>
+                            <p>{{this.position}}</p>
+                            <p>Applied: {{this.applied}}</p>
+                        </div>
+                    {{/each}}
+            	</div>
+            </div>
+            <div class="col">
+                <div class="card">
+                	<h2>Rejected</h2>
+                    {{#each rejected}}
+                        <div class="small-card">
+                            <h3>
+                                {{company}}
+                                <a href="/edit/{{slug}}">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </h3>
+                            <p>{{this.position}}</p>
+                            <p>Applied: {{this.applied}}</p>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

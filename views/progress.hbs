@@ -1,0 +1,59 @@
+<canvas id="graph" width="400" height="100"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+
+	function getCompanyNames(data) {
+		let ret = [];
+		Object.keys(data).forEach(function(key) {
+			ret.push(data[key].meta_data.company);
+		});
+		return ret;
+	}
+
+	function getNumRounds(data) {
+		let ret = [];
+		Object.keys(data).forEach(function(key) {
+			ret.push(data[key].interviews.length);
+		})
+		console.log(ret);
+		return ret;
+	}
+
+	let apps = {{{apps}}}
+	let chart = $('#graph');
+	let companies = getCompanyNames(apps);
+	let numRounds = getNumRounds(apps);
+	
+	// let stages = ['hackerrank', 'phone', 'onsite'];
+	// console.log(apps);
+	new Chart($('#graph'), {
+		type: 'bar',
+		data: {
+			labels: companies,
+			datasets: [{
+				label: "Number of Rounds",
+				data: numRounds
+			}]
+		},
+		options: {
+			legend: {display: false},
+			title: {
+				display: true,
+				text: 'Progress of Interview Process for Applied Company'
+			},
+			responsive: true,
+			scales: {
+				yAxes: [{
+					display: true,
+					ticks: {
+						beginAtZero: true,
+						max: 5,
+						min: 0
+					}
+				}]
+			}
+		}
+	});
+	
+</script>

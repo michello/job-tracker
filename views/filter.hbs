@@ -1,0 +1,18 @@
+{{#if data}}
+	<div class="row">
+		{{#each data}}
+			<div class="small-card col">
+	    		<h3>
+	    			{{company}}
+	    			<a href="/edit/{{slug}}">
+	    				<i class="fas fa-pencil-alt"></i>
+	    			</a>
+	    		</h3>
+	    		<p>{{this.position}}</p>
+	    		<p>Applied: {{this.applied}}</p>
+	    	</div>
+		{{/each}}
+	</div>
+{{else}}
+	Ops, your query didn't result in anything! :(
+{{/if}}

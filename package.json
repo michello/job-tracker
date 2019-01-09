@@ -1,0 +1,29 @@
+{
+  "name": "ml4963-final-project",
+  "version": "1.0.0",
+  "description": "Applying to jobs has always been a very confusing and messy process, especially when I've been mindlessly dropping resumes and applications like there is no tomorrow. As a result, it gets hard to remember which companies I've already applied and how far I've progressed with my interview process. Currently, I am using a Google sheets to keep track of the company, the position I applied for, the status of my applciation, and how far I've progressed in the interview process:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-001-003-fall-2018/ml4963-final-project.git"
+  },
+  "devDependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "json-stringify-safe": "^5.0.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.12",
+    "mongoose-url-slugs": "^1.0.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
