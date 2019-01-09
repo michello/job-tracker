@@ -75,16 +75,3 @@ You can also filter by company/progress, etc:
 4. as a user, I can view all of the application entries I've made organized by the application's progress
 5. as a user, I can update an application card by clicking on the pencil icon next to a company's name
 6. as a user, I can view the progress of an application in a graph
-
-## research topics
-* (5 pts) user authentication 
-	* I'll use passport for user authentication. This will ensure users are accessing their own job board and aren't modifying or accessing other user's.
-* (2 pts) bootstrap/modified version
-	* I have some experience with existing stylesheets but not a lot. I will use an existing stylesheet to help make my application appear clean and uniform.
-* (2-3 pts) chart.js
-	* To track my progress with coding interviews, I'll use a Javascript library called ChartJS to display how my progress with companies are.
-
-## annotations / references used
-* https://scotch.io/tutorials/easy-node-authentication-setup-and-local - to do // not yet implemented
-* https://getbootstrap.com/docs/3.3/getting-started/
-* https://www.w3schools.com/bootstrap/default.asp
